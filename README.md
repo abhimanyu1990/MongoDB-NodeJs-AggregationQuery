@@ -1,12 +1,12 @@
-Problem Statement 
+# Problem Statement 
 
 ProductView detail is saved in mongodb database having userId, productId and Date as field. Write Node.js program to create weekly, monthly, yearly, daily and custom data report for total and distinct view
 
-Approach #1SKU-517
+# Approach #1
 
 1. All the data is saved  and  not processed as per requirement. Run the query directly on database. It will be in efficient and will take more time
 
-Approach #2
+# Approach #2
 
 1. Save the additional data in the ProductView collection document as time of saving the product view having additional field year, month and data as number. It will help in quick preprocessing of data and will be easy to query.
 2. At the end of day use jobs to save the data in MIS/Report for daily, monthly, yearly views for each product
@@ -16,7 +16,7 @@ Approach #2
 In thid example, I am following first approach and using MongoDB aggregate queries for different requirement.
 
 
-Function Detail
+# Function Detail
 
 CreateViews() -> this function create the records in the database {userId:number,productId ::SKU-XXXX, viewDate:Date}
 
@@ -37,7 +37,7 @@ customWeeklyDateView() -> this function create the report for weekly view count 
 customWeeklyDistinctDateView() -> this function create the report for distinct weekly view count between custom date for a product
 
 
-APIs
+# APIs
 
 1. Weekly View
 
